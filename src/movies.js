@@ -6,7 +6,7 @@ const Movies = props => (
     <ul className="movies">
       {props.movies.map(movie => (
         <li key={movie.id}>
-          <Movie {...movie} />
+          <movie {...movie} />
         </li>
       ))}
     </ul>
