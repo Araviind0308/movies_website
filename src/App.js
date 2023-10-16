@@ -1,6 +1,6 @@
 import React from "react";
-import Search from "./search";
-import Movies from "./movies";
+import Search from "./components/Search";
+import Movies from "./components/Movies";
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -34,7 +34,7 @@ class App extends React.Component {
   }
   
   searchMovie(query) {
-    const url = `https://www.omdbapi.com/?apikey=45f0782a&s=war`;
+    const url = `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=cfe422613b250f702980a3bbf9e90716`;
     
     fetch (url)
       .then(response => response.json())
